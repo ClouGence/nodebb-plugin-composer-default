@@ -9,6 +9,9 @@
 .define-if-not-set();
 
 .composer {
+	p {
+		margin: 0 0 10px;
+	}
 	.no-select;
 
 	z-index: @zindex-modal;
@@ -196,7 +199,7 @@
 
 	.write, .preview  {
 		width: 100%;
-		font-size: 16px;
+		font-size: 14px;
 		.border-radius(0);
 		resize: none;
 		overflow: auto;
@@ -216,7 +219,13 @@
 		user-select: text;
 
 		p {
-			margin: 0 0 18px;
+			line-height: 1.74;
+			margin-bottom: 10px;
+		}
+		ul,ol {
+			p {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -441,6 +450,84 @@
 		&.active {
 			animation: draft-saved 3s ease;
 		}
+	}
+
+	h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+		margin-top: 0px;
+	}
+
+	h1 {
+		font-size: 28px;
+		line-height: 36px;
+		margin: 26px 0 10px 0;
+	}
+
+	h2 {
+		font-size: 24px;
+		line-height: 32px;
+		margin: 21px 0 5px 0;
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 28px;
+		margin: 16px 0 5px 0;
+	}
+
+	h4 {
+		font-size: 16px;
+		line-height: 24px;
+		margin: 10px 0 5px 0;
+	}
+
+	h5 {
+		font-size: 15px;
+		line-height: 24px;
+		margin: 8px 0 5px 0;
+	}
+
+	h6 {
+		margin: 8px 0 5px 0;
+	}
+
+	p {
+		line-height: 1.74;
+	}
+
+	ul,ol {
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.icon {
+		position: relative;
+		border-radius: 50%;
+		min-width: 46px;
+		min-height: 46px;
+		margin-top: 2px;
+
+
+		> a > .status {
+			position: absolute;
+			right: 12px;
+			font-size: 12px;
+			top: 0px;
+			z-index: 1;
+
+			@media (min-width: @screen-md-min) {
+				top: 2px;
+				font-size: 16px;
+			}
+		}
+
+		.avatar {
+			margin-right: 15px;
+		}
+	}
+
+	.status {
+		vertical-align: 0%;
 	}
 }
 
